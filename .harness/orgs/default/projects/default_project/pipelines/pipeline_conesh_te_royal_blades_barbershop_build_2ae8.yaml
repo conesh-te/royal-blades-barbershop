@@ -2,8 +2,8 @@ pipeline:
   id: pipeline_conesh_te_royal_blades_barbershop_build_2ae8
   name: pipeline_conesh_te_royal_blades_barbershop_build_2ae8
   stages:
-    - name: Validate
-      id: validate
+    - name: Build and Test JUnit
+      id: build_and_test
       runtime: cloud
       platform:
         os: linux
@@ -13,17 +13,13 @@ pipeline:
       cache:
         enabled: true
       steps:
-        - name: Check Repository
-          id: check_repository
+        - name: Ejecutar Pruebas JUnit con Maven
+          id: run_junit_tests
           run:
             shell: bash
             script: |-
-              echo "Repository contents:"
-              ls -la
-              echo ""
-              echo "README.md contents:"
-              cat README.md
-              echo ""
-              echo "Repository validated successfully."
+              java -version
+              mvn -version
+              mvn -B test
   tags:
     onboarding: "true"
