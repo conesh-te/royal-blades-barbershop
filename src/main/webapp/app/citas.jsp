@@ -16,18 +16,17 @@
 <body class="bg-light">
 <nav class="navbar navbar-dark bg-dark px-4">
     <a class="navbar-brand fw-bold" href="dashboard.jsp">← Volver al Panel</a>
-    <span class="navbar-text text-white">Registro y Asignación de Citas</span>
+    <span class="navbar-text text-white">Registro y Cierre de Citas</span>
 </nav>
 
 <div class="container py-4">
     <% if (request.getParameter("ok") != null) { %>
-        <div class="alert alert-success">Cita registrada y asignada correctamente.</div>
+        <div class="alert alert-success">Agenda actualizada correctamente.</div>
     <% } else if (request.getParameter("error") != null) { %>
-        <div class="alert alert-danger">Error al agendar cita (verifica que haya barberos en turno).</div>
+        <div class="alert alert-danger">Error al procesar la cita (verifica que haya barberos en turno).</div>
     <% } %>
 
     <div class="row g-4">
-        <!-- Formulario Agendar Cita -->
         <div class="col-md-4">
             <div class="card shadow-sm">
                 <div class="card-header bg-dark text-white fw-semibold">Nueva Cita</div>
@@ -76,7 +75,6 @@
             </div>
         </div>
 
-        <!-- Agenda de Citas -->
         <div class="col-md-8">
             <div class="card shadow-sm">
                 <div class="card-header bg-white fw-semibold">Agenda de Citas Recientes</div>
@@ -88,8 +86,8 @@
                                 <th>Cliente</th>
                                 <th>Servicio</th>
                                 <th>Barbero</th>
-                                <th>Asignación</th>
                                 <th>Estado</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -101,10 +99,31 @@
                                 <td><%= esc(c.getNombreCliente()) %></td>
                                 <td><%= esc(c.getNombreServicio()) %> ($<%= c.getMontoCobrado() %>)</td>
                                 <td class="fw-semibold"><%= esc(c.getNombreBarbero()) %></td>
-                                <td><span class="badge <%= c.isAsignacionManual() ? "bg-info text-dark" : "bg-secondary" %>">
-                                    <%= c.isAsignacionManual() ? "Solicitado" : "Equitativa" %></span></td>
-                                <td><span class="badge <%= "COMPLETADA".equals(c.getEstado()) ? "bg-success" : "bg-warning text-dark" %>">
-                                    <%= esc(c.getEstado()) %></span></td>
+                                <td>
+                                    <% if ("COMPLETADA".equals(c.getEstado())) { %>
+                                        <span class="badge bg-success">COMPLETADA</span>
+                                    <% } else if ("CANCELADA".equals(c.getEstado())) { %>
+                                        <span class="badge bg-danger">CANCELADA</span>
+                                    <% } else { %>
+                                        <span class="badge bg-warning text-dark">PENDIENTE</span>
+                                    <% } %>
+                                </td>
+                                <td>
+                                    <% if ("PENDIENTE".equals(c.getEstado())) { %>
+                                        <form action="reportes" method="post" class="d-inline">
+                                            <input type="hidden" name="idCita" value="<%= c.getIdCita() %>">
+                                            <input type="hidden" name="estado" value="COMPLETADA">
+                                            <button type="submit" class="btn btn-sm btn-success">Cobrar</button>
+                                        </form>
+                                        <form action="reportes" method="post" class="d-inline">
+                                            <input type="hidden" name="idCita" value="<%= c.getIdCita() %>">
+                                            <input type="hidden" name="estado" value="CANCELADA">
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">X</button>
+                                        </form>
+                                    <% } else { %>
+                                        <small class="text-muted">Cerrada</small>
+                                    <% } %>
+                                </td>
                             </tr>
                         <% } } else { %>
                             <tr><td colspan="6" class="text-center text-muted py-3">No hay citas registradas.</td></tr>
