@@ -1,0 +1,29 @@
+pipeline:
+  id: pipeline_conesh_te_royal_blades_barbershop_build_2ae8
+  name: pipeline_conesh_te_royal_blades_barbershop_build_2ae8
+  stages:
+    - name: Validate
+      id: validate
+      runtime: cloud
+      platform:
+        os: linux
+        arch: amd64
+      clone:
+        enabled: true
+      cache:
+        enabled: true
+      steps:
+        - name: Check Repository
+          id: check_repository
+          run:
+            shell: bash
+            script: |-
+              echo "Repository contents:"
+              ls -la
+              echo ""
+              echo "README.md contents:"
+              cat README.md
+              echo ""
+              echo "Repository validated successfully."
+  tags:
+    onboarding: "true"
