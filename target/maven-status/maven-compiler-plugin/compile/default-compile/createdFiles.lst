@@ -1,10 +1,13 @@
 com/royalblades/modelo/Usuario.class
 com/royalblades/servicio/AsignacionService.class
-com/royalblades/seguridad/PasswordUtil.class
-com/royalblades/config/ConexionBD.class
 com/royalblades/seguridad/AuthFilter.class
 com/royalblades/dao/UsuarioDAO.class
 com/royalblades/controlador/LoginServlet.class
-tecmilenio/royal/blades/barbershop/JakartaRestConfiguration.class
+com/royalblades/controlador/BarberoServlet.class
 tecmilenio/royal/blades/barbershop/resources/JakartaEE10Resource.class
 com/royalblades/controlador/LogoutServlet.class
+com/royalblades/modelo/Barbero.class
+com/royalblades/seguridad/PasswordUtil.class
+com/royalblades/config/ConexionBD.class
+com/royalblades/dao/BarberoDAO.class
+tecmilenio/royal/blades/barbershop/JakartaRestConfiguration.class

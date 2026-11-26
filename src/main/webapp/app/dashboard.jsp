@@ -38,7 +38,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Usuarios y Barberos</h5>
                     <p class="card-text text-muted">Alta de personal y control de turnos.</p>
-                    <a href="#" class="btn btn-warning disabled">Próximamente (Issue #2)</a>
+                    <a href="admin/barberos" class="btn btn-warning fw-semibold">Administrar Personal</a>
                 </div>
             </div>
         </div>
