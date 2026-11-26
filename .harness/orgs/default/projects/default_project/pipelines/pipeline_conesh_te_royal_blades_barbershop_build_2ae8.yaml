@@ -1,0 +1,25 @@
+pipeline:
+  id: pipeline_conesh_te_royal_blades_barbershop_build_2ae8
+  name: pipeline_conesh_te_royal_blades_barbershop_build_2ae8
+  stages:
+    - name: Build and Test JUnit
+      id: build_and_test
+      runtime: cloud
+      platform:
+        os: linux
+        arch: amd64
+      clone:
+        enabled: true
+      cache:
+        enabled: true
+      steps:
+        - name: Ejecutar Pruebas JUnit con Maven
+          id: run_junit_tests
+          run:
+            shell: bash
+            script: |-
+              java -version
+              mvn -version
+              mvn -B test
+  tags:
+    onboarding: "true"
