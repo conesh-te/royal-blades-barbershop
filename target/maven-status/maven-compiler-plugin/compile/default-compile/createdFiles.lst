@@ -1,5 +1,8 @@
 com/royalblades/modelo/Usuario.class
 com/royalblades/servicio/AsignacionService.class
+com/royalblades/modelo/ResumenComision.class
+com/royalblades/dao/ReporteDAO.class
+com/royalblades/controlador/ReporteServlet.class
 com/royalblades/seguridad/AuthFilter.class
 com/royalblades/modelo/Cita.class
 com/royalblades/dao/UsuarioDAO.class

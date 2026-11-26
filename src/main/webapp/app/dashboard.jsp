@@ -27,8 +27,17 @@
             <div class="card h-100 shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">Gestión de Citas</h5>
-                    <p class="card-text text-muted">Registrar citas con asignación equitativa o manual.</p>
+                    <p class="card-text text-muted">Registrar citas con asignación equitativa o manual y cerrar servicios.</p>
                     <a href="citas" class="btn btn-dark">Abrir Agenda</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Reportes y Comisiones</h5>
+                    <p class="card-text text-muted">Consulta de ingresos y cálculo de comisiones por fecha.</p>
+                    <a href="reportes" class="btn btn-primary">Ver Reportes</a>
                 </div>
             </div>
         </div>
