@@ -28,7 +28,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Gestión de Citas</h5>
                     <p class="card-text text-muted">Registrar citas con asignación equitativa o manual.</p>
-                    <a href="#" class="btn btn-dark disabled">Próximamente (Issue #3)</a>
+                    <a href="citas" class="btn btn-dark">Abrir Agenda</a>
                 </div>
             </div>
         </div>

@@ -1,7 +1,9 @@
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/modelo/Usuario.java
+/home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/dao/CitaDAO.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/config/ConexionBD.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/seguridad/PasswordUtil.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/tecmilenio/royal/blades/barbershop/JakartaRestConfiguration.java
+/home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/modelo/Servicio.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/servicio/AsignacionService.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/controlador/LogoutServlet.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/controlador/BarberoServlet.java
@@ -9,5 +11,7 @@
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/modelo/Barbero.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/seguridad/AuthFilter.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/dao/BarberoDAO.java
+/home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/modelo/Cita.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/controlador/LoginServlet.java
+/home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/controlador/CitaServlet.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/tecmilenio/royal/blades/barbershop/resources/JakartaEE10Resource.java
