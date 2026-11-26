@@ -9,6 +9,7 @@ com/royalblades/dao/UsuarioDAO.class
 com/royalblades/controlador/LoginServlet.class
 com/royalblades/controlador/BarberoServlet.class
 com/royalblades/controlador/CitaServlet.class
+com/royalblades/servicio/NotificacionEmailService.class
 tecmilenio/royal/blades/barbershop/resources/JakartaEE10Resource.class
 com/royalblades/controlador/LogoutServlet.class
 com/royalblades/modelo/Barbero.class
@@ -18,3 +19,4 @@ com/royalblades/modelo/Servicio.class
 com/royalblades/dao/CitaDAO.class
 com/royalblades/dao/BarberoDAO.class
 tecmilenio/royal/blades/barbershop/JakartaRestConfiguration.class
+com/royalblades/servicio/NotificacionEmailService$1.class

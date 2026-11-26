@@ -1,6 +1,7 @@
 package com.royalblades.controlador;
 
 import com.royalblades.dao.CitaDAO;
+import com.royalblades.servicio.NotificacionEmailService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,6 +14,7 @@ import java.sql.SQLException;
 public class CitaServlet extends HttpServlet {
 
     private final CitaDAO citaDAO = new CitaDAO();
+    private final NotificacionEmailService emailService = new NotificacionEmailService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
@@ -40,7 +42,10 @@ public class CitaServlet extends HttpServlet {
                     ? Integer.parseInt(barberoParam) : null;
             String fechaHora = req.getParameter("fechaHora");
 
-            citaDAO.registrarCita(nombre, telefono, correo, idServicio, idBarbero, fechaHora);
+            boolean guardada = citaDAO.registrarCita(nombre, telefono, correo, idServicio, idBarbero, fechaHora);
+            if (guardada) {
+                emailService.enviarConfirmacionCita(correo, nombre, fechaHora);
+            }
             res.sendRedirect(req.getContextPath() + "/app/citas?ok=1");
         } catch (SQLException e) {
             e.printStackTrace();

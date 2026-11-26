@@ -1,5 +1,6 @@
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/modelo/Usuario.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/dao/CitaDAO.java
+/home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/servicio/NotificacionEmailService.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/config/ConexionBD.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/seguridad/PasswordUtil.java
 /home/conesh/Documents/Java/royal-blades-barbershop/src/main/java/com/royalblades/dao/ReporteDAO.java
